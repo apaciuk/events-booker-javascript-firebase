@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Event Booking</title>
+</head>
+<body>
+    <header id="home">
+     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Eventastic</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#events">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#add-event">New Event</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="welcome-event"></div>
+    </header>
+    <main >
+        <section id="events">
+            <h1 class="section-title">Events</h1>
+            <div class="events-container"></div>
+        </section>
+        <section id="add-event">
+            <h1 class="section-title">New Event</h1>
+            <form class="form-control">
+                <input class="form-control" type="text" id="name" placeholder="Name">
+                <input class="form-control" type="number" id="attendee" placeholder="Attendees">
+                <textarea class="form-control" id="description" cols="30" rows="10" placeholder="Description..."></textarea>
+                <select class="form-control"  id="status">
+                    <option value="0">Free</option>
+                    <option value="1">Paid</option>
+                </select>
+                <button class="btn btn-primary">Save</button>
+            </form>
+        </section>
+    </main>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+     apiKey: "AIzaSyALROYBxaEjYOlv6RX0sCgkNvEQsHFLAJE",
+    authDomain: "js-events.firebaseapp.com",
+    databaseURL: "https://js-events.firebaseio.com",
+    projectId: "js-events",
+    storageBucket: "js-events.appspot.com",
+    messagingSenderId: "218985627388",
+    appId: "1:218985627388:web:6ef0a39bb2699979ac2179"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore()
+</script>
+ <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
+<script src="js/db.js"></script>
+<script src="js/app.js"></script>
+ <!-- Footer -->
+ <footer class="py-5 bg-black">
+  <div class="container">
+    <p class="m-0 text-center text-white small">Copyright &copy; Paul Anthony McGowan 2019</p>
+  </div>
+  <!-- /.container -->
+</footer>
+
+</body>
+</html>
